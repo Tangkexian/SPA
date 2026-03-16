@@ -4,7 +4,7 @@
 
 Institute for Interdisciplinary Information Sciences, Tsinghua University
 
-\* Equal contribution. † Corresponding author: klyu@mail.tsinghua.edu.cn
+\* Equal contribution. † Corresponding author
 
 
 <p align="left">
