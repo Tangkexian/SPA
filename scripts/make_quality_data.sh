@@ -1,36 +1,42 @@
 #!/bin/bash
 
-# --- Configuration --- #
-MODEL_NAME="openai/gpt-oss-120b" 
-VLLM_SERVER_GPUS="0,1,2,3" # comma-separated list of GPU ids to use for vLLM server, e.g., "0,1,2,3"
+# --- Model Configuration --- #
+MODEL_NAME="models/openai/gpt-oss-120b" 
+VLLM_SERVER_GPUS="0,1,2,3"  # GPUs for vLLM server (e.g. "0,1,2,3")
 
-# dataset parameters
-DATASET_NAME="quality" # choices: "quality", "mhrag", "squad"
-DATASET_IN="QuALITY"
-DATASET_OUT="data/synthetic_quality/quality.json" # the json path to save the generated data
-NUM_ARTICLES=-1 # how many articles (-1 for all) 
-START_ARTICLE=0 # start from this article number
-K=100 # number of samples to generate per document
+# --- Dataset Configuration --- #
+DATASET_NAME="quality"      # choices: quality, mhrag, squad
+DATASET_IN="data/QuALITY"
+PROMPT_KEY="implications" # prompt type:
+# implications | key_concepts | teacher_style | discussions
+# case_studies | mind_map | qa_critical_thinking
+DATASET_OUT="data/synthetic_quality/quality_${PROMPT_KEY}.json" 
+NUM_ARTICLES=3   # number of articles to process (-1 for all)
+START_ARTICLE=0  # starting article index
+K=10             # number of samples generated per document
 
-# Generation parameters
+# --- Generation Parameters --- #
 TEMPERATURE=1.0
 TOP_P=1.0
 TOP_K=0
 MIN_P=0
 MAX_TOKENS=16384
-PROMPT_KEY="key_concepts" # which prompt to use, choices: "implications", "key_concepts", "teacher_style", "discussions", "case_studies", "mind_map", "qa_critical_thinking"
-INSTRUCT_MODEL=1 # choices: 0 (base model), 1 (instruct model)
-USE_API=0 #choices: 0 (vLLM), 1 (API)
 
+# --- Inference Backend --- #
+INSTRUCT_MODEL=1    # 0: base model | 1: instruct model
+USE_API=0           # 0: vLLM | 1: API
+
+# --- Derived Parameters --- #
 TP_SIZE=$(echo "${VLLM_SERVER_GPUS}" | awk -F',' '{print NF}')
 INS_FLAG=""
-    if [[ "${INSTRUCT_MODEL}" == "1" ]]; then
-        INS_FLAG="--instruct_model"
-    fi
+if [[ "${INSTRUCT_MODEL}" == "1" ]]; then
+    INS_FLAG="--instruct_model"
+fi
 API_FLAG=""
-    if [[ "${USE_API}" == "1" ]]; then
-        API_FLAG="--use_api"
-    fi
+if [[ "${USE_API}" == "1" ]]; then
+    API_FLAG="--use_api"
+fi
+
 # --------------------------------------------------------------------- #
 echo "Running offline vLLM data generation on GPUs ${VLLM_SERVER_GPUS} (TP=${TP_SIZE})"
 CUDA_VISIBLE_DEVICES=${VLLM_SERVER_GPUS} python3 -m src.generate_data \

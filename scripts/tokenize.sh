@@ -1,8 +1,8 @@
 #!/bin/bash
-MODEL="Model/meta-llama/Meta-Llama-3-8B"
+MODEL="models/meta-llama/Meta-Llama-3-8B"
 MODEL_NAME="${MODEL##*/}"
 
-DATASET="data_implications.json,data_key_concepts.json,data_teacher_style.json,data_discussions.json,data_case_studies.json,data_mind_map.json,data_qa_critical_thinking.json" # the dataset paths, separated by commas
+DATASET="data/synthetic_squad/squad_implications.json,data/synthetic_squad/squad_key_concepts.json,data/synthetic_squad/squad_teacher_style.json,data/synthetic_squad/squad_discussions.json,data/synthetic_squad/squad_case_studies.json,data/synthetic_squad/squad_mind_map.json,data/synthetic_squad/squad_qa_critical_thinking.json" # the dataset paths, separated by commas
 DATASET_ARGS=${DATASET//,/ }
 K_COMP=50,100,60,70,80,110,90 # the number of samples needed for each dataset, separated by commas
 K_COMP_ARGS=${K_COMP//,/ }
