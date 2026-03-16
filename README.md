@@ -16,11 +16,11 @@ Institute for Interdisciplinary Information Sciences, Tsinghua University
 ## Overview
 
 ![SPA Overview](asserts/overview.png)
-> **SPA** (**S**caling **P**rompt-engineered **A**ugmentation) is a simple but tough-to-beat baseline. It uses a small set of carefully designed prompts to generate large-scale synthetic data for knowledge injection.
->
-> We evaluate SPA on three representative benchmarks: **SQuAD** (Wikipedia-based QA), **QuALITY** (long-document comprehension), and **MultiHop-RAG** (multi-hop reasoning). Through systematic comparisons, we show that despite its simplicity, **SPA** outperforms several strong and more complex baselines.
->
->Our results suggest that, for knowledge injection, careful prompt design combined with straightforward large-scale augmentation can be surprisingly effective. We hope SPA can serve as a strong baseline for future studies in this area. 
+**SPA** (**S**caling **P**rompt-engineered **A**ugmentation) is a simple but tough-to-beat baseline. It uses a small set of carefully designed prompts to generate large-scale synthetic data for knowledge injection.
+
+We evaluate SPA on three representative benchmarks: **SQuAD** (Wikipedia-based QA), **QuALITY** (long-document comprehension), and **MultiHop-RAG** (multi-hop reasoning). Through systematic comparisons, we show that despite its simplicity, **SPA** outperforms several strong and more complex baselines.
+
+Our results suggest that, for knowledge injection, careful prompt design combined with straightforward large-scale augmentation can be surprisingly effective. We hope SPA can serve as a strong baseline for future studies in this area. 
 
 ## News
 
