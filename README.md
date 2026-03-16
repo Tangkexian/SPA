@@ -1,6 +1,9 @@
 # SPA: A Simple but Tough-to-Beat Baseline for Knowledge Injection
 
-**Kexian Tang\*, Jiani Wang\*, Shaowen Wang, Kaifeng Lyu†**
+[**Kexian Tang**](https://scholar.google.com/scholar?hl=en&as_sdt=0,5&q=Kexian+Tang&btnG=)\*,
+[**Jiani Wang**](https://github.com/99ninew)\*, 
+[**Shaowen Wang**](https://scholar.google.com/citations?user=TtCmtjAAAAAJ&hl=en&oi=ao), 
+[**Kaifeng Lyu†**](https://kaifeng.ac/)
 
 Institute for Interdisciplinary Information Sciences, Tsinghua University
 
