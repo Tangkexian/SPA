@@ -91,6 +91,10 @@ bash scripts/make_squad_data.sh
 ```bash
 bash scripts/make_quality_data.sh
 ```
+> **Notes**
+> - If you use **GPT-OSS-120B** to generate QuALITY synthetic data, please upgrade **vLLM** to **0.10.2**.
+> - Upgrading vLLM may also upgrade these packages automatically: `openai==2.26.0`, `torch==2.8.0`, `transformers==4.57.6`. This is fine, and we also use this setup in this step.
+> - It is recommended to clone a fresh environment before running this workflow. We only use this environment for QuALITY data generation; all other workflows follow the versions in `requirements`.
 
 **MultiHop-RAG** (Multi-hop reasoning):
 ```bash
