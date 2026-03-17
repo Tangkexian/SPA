@@ -1,5 +1,5 @@
 #!/bin/bash
-MODEL="models/meta-llama/Meta-Llama-3-8B"
+MODEL="meta-llama/Meta-Llama-3-8B"
 MODEL_NAME="${MODEL##*/}"
 
 DATASET="data/synthetic_squad/squad_implications.json,data/synthetic_squad/squad_key_concepts.json,data/synthetic_squad/squad_teacher_style.json,data/synthetic_squad/squad_discussions.json,data/synthetic_squad/squad_case_studies.json,data/synthetic_squad/squad_mind_map.json,data/synthetic_squad/squad_qa_critical_thinking.json" # the dataset paths, separated by commas

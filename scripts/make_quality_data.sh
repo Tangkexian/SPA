@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # --- Model Configuration --- #
-MODEL_NAME="models/openai/gpt-oss-120b" 
+MODEL_NAME="openai/gpt-oss-120b" 
 VLLM_SERVER_GPUS="0,1,2,3"  # GPUs for vLLM server (e.g. "0,1,2,3")
 
 # --- Dataset Configuration --- #

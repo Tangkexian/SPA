@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # --- Model Configuration --- #
-MODEL_NAME="models/Qwen/Qwen2.5-7B" 
+MODEL_NAME="Qwen/Qwen2.5-7B" 
 VLLM_SERVER_GPUS="0,1"  # GPUs for vLLM server (e.g. "0,1,2,3")
 
 # --- Dataset Configuration --- #
