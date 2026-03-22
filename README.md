@@ -9,8 +9,7 @@ Institute for Interdisciplinary Information Sciences, Tsinghua University
 
 \* Equal contribution.
 
-Contact: tangkx25@mails.tsinghua.edu.cn
-
+Contact: {tangkx25,wangjn23}@mails.tsinghua.edu.cn
 
 <p align="left">
   <a href='TBA'>
