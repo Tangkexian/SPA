@@ -28,7 +28,7 @@ Our results suggest that, for knowledge injection, careful prompt design combine
 
 ## News
 
-- **[2026-03-xx]** Our Paper is released.
+- **[2026-03-24]** Our Paper is released.
 
 ## Method
 
