@@ -12,8 +12,8 @@ Institute for Interdisciplinary Information Sciences, Tsinghua University
 Contact: {tangkx25,wangjn23}@mails.tsinghua.edu.cn
 
 <p align="left">
-  <a href='TBA'>
-    <img src='https://img.shields.io/badge/Paper-TBA-brown?style=flat&logo=arXiv' alt='arXiv PDF'>
+  <a href='https://arxiv.org/abs/2603.22213'>
+    <img src='https://img.shields.io/badge/Paper-2603.22213-brown?style=flat&logo=arXiv' alt='arXiv PDF'>
   </a>
 </p>
 
@@ -61,7 +61,7 @@ SPA **consistently improves with scale** and achieves the highest accuracy at mo
 </table>
 
 
-See the [paper](TBA) for full results.
+See the [paper](https://arxiv.org/abs/2603.22213) for full results.
 
 ## Getting Started
 
@@ -123,7 +123,11 @@ bash scripts/train.sh
 ## Citation
 
 ```bibtex
-@article{
-  TBA
+@article{tang2026spa,
+      title={SPA: A Simple but Tough-to-Beat Baseline for Knowledge Injection}, 
+      author={Tang, Kexian and Wang, Jiani and Wang, Shaowen and Lyu, Kaifeng},
+      journal={arXiv preprint arXiv:2603.22213},
+      year={2026},
+      url={https://arxiv.org/abs/2603.22213}
 }
 ```
